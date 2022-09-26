@@ -10,3 +10,9 @@ while True:
     else:
         break
 print(numbers)
+def median(numbers):
+numbers.sort()
+list_length = len(numbers)
+if list_length % 2 == 0:
+return (list[int(list_length / 2) - 1] + list[int(list_length / 2)]) / 2
+return list[int(list_length / 2)]
