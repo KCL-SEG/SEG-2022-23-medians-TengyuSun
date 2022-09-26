@@ -9,10 +9,15 @@ while True:
         print("Some input could not be converted to a number!")
     else:
         break
-print(numbers)
-def median(numbers):
-numbers.sort()
-list_length = len(numbers)
-if list_length % 2 == 0:
-return (list[int(list_length / 2) - 1] + list[int(list_length / 2)]) / 2
-return list[int(list_length / 2)]
+
+def median(x):
+    x.sort()
+    list_length = len(x)
+    if list_length % 2 == 1:
+        z = list_length // 2
+        y = x[z]
+    else:
+        y = (x[list_length // 2] + x[list_length // 2 - 1]) / 2
+        return y
+
+print(median(numbers))
