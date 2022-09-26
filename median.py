@@ -10,14 +10,15 @@ while True:
     else:
         break
 
-def median(x):
-    x.sort()
-    list_length = len(x)
-    if list_length % 2 == 1:
-        z = list_length // 2
-        y = x[z]
-    else:
-        y = (x[list_length // 2] + x[list_length // 2 - 1]) / 2
-        return y
+def get_median(x):
+   x = sorted(x)
+   size = len(x)
+   if size % 2 == 0: # 判断列表长度为偶数
+    median = (x[size//2]+x[size//2-1])/2
+    x[0] = median
+   if size % 2 == 1: # 判断列表长度为奇数
+    median = x[(size-1)//2]
+    x[0] = median
+   return x[0]
 
-print(median(numbers))
+print(get_median(numbers))
